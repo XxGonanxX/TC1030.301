@@ -3,3 +3,7 @@ Este programa está pensado para ser una recreación del clásico juego de las a
 
 # UML
 El diagrama muestra las clases que se usarán para la creación del videojuego de manera visual, con señalamientos que permiten a cualquier persona que vea el diagrama entender de manera básica como funcionará el programa.
+
+
+# Segundo cambio
+Se corrigió el UML junto con al explicación del proyecto en este Readme.
