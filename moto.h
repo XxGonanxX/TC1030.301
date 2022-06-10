@@ -26,15 +26,8 @@ public:
         turbo = t;
         velocidad = v;
     }
-    moto operator+(moto const &obj)
-    {
-        moto res;
-        res.turbo = turbo + obj.turbo;
-        res.velocidad = velocidad + obj.velocidad;
-        return res;
-    }
     void print() { cout << turbo << " + v" << velocidad << '\n'; }
-    virtual void uno(){}
+    virtual void uno() = 0;
     
     
 

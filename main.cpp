@@ -42,8 +42,9 @@ int main()
             motonormal.getturbo(turbo);
             motonormal.getvelocidad(velocidad);
             motonormal.print();
+            motonormal.turboyvelocidad(); // Se aplica la sobrecarga de operadores
             motonormal.turboyvelocidadboost(turbo, velocidad); //Aquí se aplica la sobrecarga de funciónes
-            moto* motonormal = new normal(); //Aquí se aplica el polimorfóismo y pointers
+            moto* motonormal = new normal(); //Aquí se aplica el polimorfóismo, pointers y abstracción
             motonormal ->uno();
 
 
