@@ -10,3 +10,6 @@ Se corrigió el UML junto con al explicación del proyecto en este Readme.
 
 # Tercer cambio
 Se añadió la función de polimorfismo al código del menú.
+
+# Cuarto cambio
+Se añadió la sobrecarga de operadores y el uso de clases abstractas.
