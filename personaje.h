@@ -1,27 +1,47 @@
+/*
+ * proyecto TRON MENU
+ * Alan Patricio González Bernal
+ * A01067546
+ * 17/06/2022
+ * 
+ * Esta librería me permite integrar todos los
+ * Conceptos necesarios para que el programa
+ * Funcione correctamente con los comandos
+ * Creados para los personajes. Añadiendo a
+ * TRON y a CLU.
+ */
+
 #ifndef PERSONAJE_H
 #define PERSONAJE_H
 
 #include <string>
 #include <stdio.h>
 
+/* Se crea la clase padre, la cual tendrá
+ * Dos clases hijas, siendo estas TRON y
+ * CLU.
+ */
 class Personaje
 {
+    // Declaro variables públicas.
 public:
     Personaje();
     ~Personaje();
 
     int getvidas(int vidas);
     int setvidas(int vidas);
-    string getcolor(string color); // La misma situación del color del moto.h, para más información, revisar ese documento.
+    string getcolor(string color); 
     string setcolor(string color);
     string setnombre(string nombre);
     string getnombre(string nombre);
+    // Declaro variables privadas.
 private:
     int vidas = 3;
     string color;
     string nombre;
 };
 
+ // Constructores y destructores de la clase padre.
 Personaje::Personaje(){};
 Personaje::~Personaje(){};
 
@@ -37,14 +57,18 @@ string Personaje::setcolor(string color)
     return color;
 };
 
+ // Declaro TRON que hereda de personaje.
 class Tron : public Personaje
 {
+    // Declaro variables públicas.
 public:
     Tron();
     ~Tron();
     int getvidas(int vidas);
     string getcolor(string color);
     string getnombre(string nombre);
+    
+    // Declaro variables privadas.
 private:
     int vidas = 3;
     string color;
@@ -58,6 +82,7 @@ int Tron::getvidas(int vidas)
 {
     vidas = 3;
     cout << "Tron cuenta con: " << vidas << " vidas" << endl;
+    cout << "Estos datos pueden cambiar en el transcurso de la carrera. " << endl << endl;
     return vidas;
 }
 
@@ -75,14 +100,18 @@ string Tron::getnombre(string nombre)
     return nombre;
 }
 
+ // Declaro CLU que hereda de personaje.
 class Clu : public Personaje
 {
+    // Declaro variables públicas.
 public:
     Clu();
     ~Clu();
     int getvidas(int vidas);
     string getcolor(string color);
     string getnombre(string nombre);
+
+    //Declaro variables privadas.
 private:
     int vidas = 3;
     string color;
@@ -96,7 +125,9 @@ int Clu::getvidas(int vidas)
 {
     vidas = 3;
     cout << "Clu cuenta con " << vidas << " vidas" << endl;
+    cout << "Estos datos pueden cambiar en el transcurso de la carrera. " << endl << endl;
     return vidas;
+    
 }
 
 string Clu::getcolor(string color)

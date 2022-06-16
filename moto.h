@@ -1,3 +1,16 @@
+/*
+ * proyecto TRON MENU
+ * Alan Patricio González Bernal
+ * A01067546
+ * 17/06/2022
+ * 
+ * Esta librería me permite integrar todos los
+ * Conceptos necesarios para que el programa
+ * Funcione correctamente con los comandos
+ * Creados para las motos. Añadiendo la moto
+ * Normal y la moto de Kevin Flynn.
+ */
+ 
 #ifndef MOTO_H_INCLUDED
 #define MOTO_H_INCLUDED
 
@@ -5,8 +18,15 @@
 using namespace std;
 
 int a;
+
+/* Se crea la clase padre, la cual tendrá
+ * Dos clases hijas, siendo estas la moto
+ * Normal y la moto de Flynn.
+ */
 class moto
 {
+
+    //Declaro variables públicas.
 public:
     moto();
     ~moto();
@@ -30,7 +50,7 @@ public:
     virtual void uno() = 0;
     
     
-
+    // Declaro variables privadas.
 private:
     int velocidad;
     int turbo;
@@ -39,6 +59,7 @@ private:
     bool estela;
 };
 
+    // Constructores y destructores de la clase padre.
 moto::moto(){};
 moto::~moto(){};
 
@@ -69,6 +90,7 @@ string moto::setcolor(string color)
     return color;
 }
 
+    // Declaro normal que hereda de moto.
 class normal : public moto
 {
 
@@ -80,13 +102,24 @@ public:
     bool getmovimiento(bool movimiento);
     int getvelocidad(int velocidad);
     int getturbo(int turbo);
-    void print1() {cout << "Si se agarra un boost de velocidad, entonces la cantidad de turbos son: " << turbo << "\ny la velocidad se cambia a: " << velocidad +1.5 << '\n' << endl;}
+    void print1() {cout << "Si se agarra un boost de velocidad, entonces la cantidad de turbos son: " << turbo << "\ny la velocidad"
+    " se cambia a: " << velocidad +1.5 << '\n' << endl;}
     void turboyvelocidadboost(int turbo, float velocidad);
     void turboyvelocidad(int t = 3, int v = 5)
     {
         turbo = t;
         velocidad = v;
     }
+    /**
+     * turboyvelocidad recibe dos parámetros
+     *
+     * recibe dos parámetros los cuales regresará y más tarde
+     * se usarán en string.
+     *
+     * @param
+     * @return valores numéricos.
+     */
+
     normal operator+(normal const &obj)
     {
         normal res;
@@ -94,12 +127,13 @@ public:
         res.velocidad = velocidad + obj.velocidad;
         return res;
     }
+
     void print() { cout << "Los datos son: \nTurbo: " << turbo << "\nVelociad: " << velocidad << '\n'; }
     virtual void uno();
 private:
     int velocidad = 5;
     int turbo = 3;
-    string color = "Azul"; 
+    string color = "Azul/Rojo"; 
     bool movimiento = true;
     bool estela = true;
 };
@@ -109,11 +143,11 @@ normal::~normal(){};
 
 void normal::uno()
 {
-    cout << "Velocidad = 5" << endl;
+    cout << "/Estos datos pueden cambiar en el transcurso de la carrera. /" << endl << endl;
 }
 string normal::getcolor(string color)
 {
-    color = "Azul";
+    color = "Azul/Rojo";
     cout << "El color de la moto es: " << color << endl;
     return color;
 }
@@ -154,7 +188,7 @@ void normal::turboyvelocidadboost(int turbo, float velocidad)
 }
 
 
-
+    // Declaro MotoFlynn que hereda de moto.
 class motoFlynn : public moto
 {
 
@@ -224,7 +258,8 @@ void motoFlynn::turboyvelocidadboost(int turbo, float velocidad)
 }
 void motoFlynn::uno()
 {
-    cout << "Velocidad = 10" << endl;
+    cout << "/Estos datos, como fue mencionados anteriormente, pueden cambiar en el transcurso de la carrera, aunque debido a las "
+    "capacidades de la misma moto del creador, es probable que los datos que cambien como la velocidad sea solo de manera temporal. /" << endl << endl;
 }
 
 #endif
