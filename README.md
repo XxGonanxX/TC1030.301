@@ -31,3 +31,6 @@ compilar con: "g++ moto.h personaje.h main.cpp"
 correr en linux: "/a.out"
 
 correr en windows: "a.exe"
+
+# Detalles sobre el desarrollo
+Al comienzo del desarrollo se definieron las dos clases padres que se usarían para poder generar el programa: moto y personaje. Una vez decididas las clases padres se comenzó con el desarrollo de los valores que tendrían ambas clases y sus clases hijas. Una vez completado este paso, se comenzó con la ideación del main.cpp para asegurarse de que el código funcione de manera correcta. Cabe mencionar que este proyecto no está diseñado para modificaciónes del mismo, es un menú que se podría comparar con la información que uno podría conseguir en un museo. Siendo méramente de manera de exposición sobre la información que existe sobre el mundo de Tron. Esta información fue recabada utilizando como fuentes las peliculas de Tron del año 1982 y 2010.
