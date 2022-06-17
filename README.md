@@ -7,6 +7,8 @@ Este programa es un menú interactivo con el cual el usuario puede ver caracteri
 # Casos de error
 Si el usuario ingresa un valor de caracter o un valor flotante en lugar de un número entero, el ciclo for se vuelve infinito y el programa se repetirá sin fin hasta que se fuerce la salida del código. Este caso de error está mencionado en los comentarios del main.
 
+En ocasiónes, al compilar, el ciclo for se vuelve infinito y no permite al usuario ingresar ninguna opción, para corregirlo, solo se debe volver a correr el programa.
+
 # UML
 El diagrama muestra las clases que se usarán para la creación del menú de manera visual, con señalamientos que permiten a cualquier persona que vea el diagrama entender de manera básica como se relaciónan las clases.
 
