@@ -51,11 +51,31 @@ int Personaje::setvidas(int vidas)
     return vidas;
 }
 
+    /**
+     * setvidas pondrá el valor de las vidas de los personajes.
+     *
+     * Me permite declarar cuántas vidas tenrá un personaje.
+     *
+     * @param
+     * @return la cantidad de vidas que tendrán los personajes.
+     */
+
+
 string Personaje::setcolor(string color)
 {
     color = " ";
     return color;
 };
+
+    /**
+     * setcolor pondrá el valor del color de los personajes
+     *
+     * Me permite declarar el color que tendrá un personaje.
+     *
+     * @param
+     * @return la variable del color para el personaje.
+     */
+
 
  // Declaro TRON que hereda de personaje.
 class Tron : public Personaje
@@ -74,7 +94,7 @@ private:
     string color;
     string nombre;
 };
-
+    // Cosntructores y destructores de la clase Tron.
 Tron::Tron(){};
 Tron::~Tron(){};
 
@@ -82,9 +102,22 @@ int Tron::getvidas(int vidas)
 {
     vidas = 3;
     cout << "Tron cuenta con: " << vidas << " vidas" << endl;
-    cout << "Estos datos pueden cambiar en el transcurso de la carrera. " << endl << endl;
+    cout << "Estos datos pueden cambiar en el transcurso de la carrera. " << endl 
+    << endl;
     return vidas;
 }
+
+    /**
+     * getvidas me dará el valor de las vidas del personaje.
+     *
+     * Me permite ver con cuántas vidas cuenta un presonaje,
+     * en este caso, Tron.
+     *
+     * @param
+     * @return la variable del vidas para Tron.
+     */
+
+
 
 string Tron::getcolor(string color)
 {
@@ -93,12 +126,33 @@ string Tron::getcolor(string color)
     return color;
 }
 
+    /**
+     * getcolor me dará el valor del color del personaje.
+     *
+     * Me permite ver el color que tendrá un personaje.
+     *
+     * @param
+     * @return la variable del color para Tron.
+     */
+
 string Tron::getnombre(string nombre)
 {
     nombre = "TRON";
-    cout << "Combatiente: " << nombre << "\nUn héroe de leyenda capaz de salvar la red." << endl;
+    cout << "Combatiente: " << nombre << "\nUn héroe de leyenda capaz de salvar la "
+    "red." << endl;
     return nombre;
 }
+
+    /**
+     * getnombre me da el valor de nombre para el personaje
+     *
+     * Me da el valor del nombre de un personaje, en este caso
+     * Tron.
+     * 
+     * @param
+     * @return la variable del nombre para el personaje.
+     */
+
 
  // Declaro CLU que hereda de personaje.
 class Clu : public Personaje
@@ -118,6 +172,7 @@ private:
     string nombre;
 };
 
+    // Declaro los constructores y destructores de Clu.
 Clu::Clu(){};
 Clu::~Clu(){};
 
@@ -125,10 +180,21 @@ int Clu::getvidas(int vidas)
 {
     vidas = 3;
     cout << "Clu cuenta con " << vidas << " vidas" << endl;
-    cout << "Estos datos pueden cambiar en el transcurso de la carrera. " << endl << endl;
+    cout << "Estos datos pueden cambiar en el transcurso de la carrera. " << endl
+     << endl;
     return vidas;
     
 }
+
+    /**
+     * getvidas me dará el valor de las vidas del personaje.
+     *
+     * Me permite ver con cuántas vidas cuenta un presonaje,
+     * en este caso, Clu.
+     *
+     * @param
+     * @return la variable del vidas para Clu.
+     */
 
 string Clu::getcolor(string color)
 {
@@ -137,10 +203,31 @@ string Clu::getcolor(string color)
     return color;
 }
 
+    /**
+     * getcolor me dará el valor del color del personaje.
+     *
+     * Me permite ver el color que tendrá un personaje.
+     *
+     * @param
+     * @return la variable del color para Clu.
+     */
+
 string Clu::getnombre(string nombre)
 {
     nombre = "CLU";
-    cout << "Combatiente: " << nombre << "\nUn tirano que solo quiere conservar la Red para los que el considere dignos." << endl;
+    cout << "Combatiente: " << nombre << "\nUn tirano que solo quiere conservar la "
+    "Red para los que el considere dignos." << endl;
     return nombre;
 }
-#endif
+
+    /**
+     * getnombre me da el valor de nombre para el personaje
+     *
+     * Me da el valor del nombre de un personaje, en este caso
+     * Clu.
+     * 
+     * @param
+     * @return la variable del nombre para el personaje.
+     */
+
+#endif // Se termina el .h
