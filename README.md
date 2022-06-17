@@ -6,7 +6,7 @@ Este programa es un menú interactivo con el cual el usuario puede ver caracteri
 
 
 # UML
-El diagrama muestra las clases que se usarán para la creación del videojuego de manera visual, con señalamientos que permiten a cualquier persona que vea el diagrama entender de manera básica como funcionará el programa.
+El diagrama muestra las clases que se usarán para la creación del menú de manera visual, con señalamientos que permiten a cualquier persona que vea el diagrama entender de manera básica como se relaciónan las clases.
 
 
 # Segundo cambio
@@ -17,6 +17,9 @@ Se añadió la función de polimorfismo al código del menú.
 
 # Cuarto cambio
 Se añadió la sobrecarga de operadores y el uso de clases abstractas.
+
+# Quinto cambio
+Se añadieron funciónes sobre el menú principal y se le dió el formato PEP8. El programa está terminado.
 
 # Consideraciónes
 El programa solo corre en la consola y esta hecho con c++ standard por lo que corre en todos los sistemas operativos
