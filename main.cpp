@@ -143,25 +143,25 @@ int main()
                 cin >> seleccion1;
                 if(seleccion1 == 1){
 
-                   cout << endl <<"Tron tiene "<< (rand() % 100) + 1 << "% de probabilidad"
+                   cout << endl <<"Tron tiene "<< (c = rand() % 100) + 1 << "% de probabilidad"
                    "es de ganar." << endl << endl;
-                   cout << "Clu tiene "<< (rand() % 100) + 1 << "% de probabilidad"
+                   cout << "Clu tiene "<< ((rand() % 100) - c) + 1 << "% de probabilidad"
                    "es de ganar." << endl << endl << endl;
 
                 }
                 if(seleccion1 == 2){
 
-                   cout << endl << "Tron tiene "<< (rand() % 100) + 1 << "% de probabilidad"
+                   cout << endl << "Tron tiene "<< (c = rand() % 100) + 1 << "% de probabilidad"
                    "es de ganar." << endl << endl;
-                   cout << "Clu tiene "<< (rand() % 100) + 1 << "% de probabilidad"
+                   cout << "Clu tiene "<< ((rand() % 100) - c) + 1 << "% de probabilidad"
                    "es de ganar." << endl << endl << endl;
                 
                 }
                 if(seleccion1 == 3){
 
-                   cout << endl << "Tron tiene "<< (rand() % 100) + 1 << "% de probabilidad"
+                   cout << endl << "Tron tiene "<< (c = rand() % 100) + 1 << "% de probabilidad"
                    "es de ganar." << endl << endl;
-                   cout << "Clu tiene "<< (rand() % 100) + 1 << "% de probabilidad"
+                   cout << "Clu tiene "<< ((rand() % 100) - c ) + 1 << "% de probabilidad"
                    "es de ganar." << endl << endl << endl;
                 }   
                 else{
@@ -194,3 +194,11 @@ int main()
     };
     return 0;
 }
+
+/**
+ * Casos de error:
+ * 
+ * Si en algún punto el usuario decide ingresar un valor flotante o un caracter, el 
+ * código entará en error y empezará un bucle infinito, caso en el cual se deberá
+ * reiniciar el programa.
+ */
