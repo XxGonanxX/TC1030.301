@@ -4,7 +4,6 @@ Este programa está pensado para ser un menú de selección para ver todos los a
 # Funcionalidad
 Este programa es un menú interactivo con el cual el usuario puede ver caracteristicas y especificaciónes sobre las motos del mundo de Tron y sus personajes, además de una explicación sobre la historia del mundo de tron y predicciónes sobre carreras próximas, hasta máximo 3 carreras en el futuro.
 
-
 # UML
 El diagrama muestra las clases que se usarán para la creación del menú de manera visual, con señalamientos que permiten a cualquier persona que vea el diagrama entender de manera básica como se relaciónan las clases.
 
@@ -29,3 +28,6 @@ compilar con: "g++ moto.h personaje.h main.cpp"
 correr en linux: "/a.out"
 
 correr en windows: "a.exe"
+
+# Casos de error
+Si el usuario ingresa un valor de caracter o un valor flotante en lugar de un número entero, el ciclo for se vuelve infinito y el programa se repetirá sin fin hasta que se fuerce la salida del código.
